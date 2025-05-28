@@ -103,6 +103,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'PSBsCFxZwITZldbvh1gP3ozluXeMCsqL8vdJTRsR9vw',
+    other: {
+      'google-site-verification': 'PSBsCFxZwITZldbvh1gP3ozluXeMCsqL8vdJTRsR9vw'
+    }
   },
 };
 
@@ -116,6 +119,8 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1, user-scalable=yes, viewport-fit=cover" />
         <meta name="theme-color" content="#0033a0" />
+        <meta name="google-site-verification" content="PSBsCFxZwITZldbvh1gP3ozluXeMCsqL8vdJTRsR9vw" />
+        {/* Google Search Console Verification - New Code */}
         <meta name="google-site-verification" content="PSBsCFxZwITZldbvh1gP3ozluXeMCsqL8vdJTRsR9vw" />
 
         {/* SEO Meta Tags المتقدمة */}
