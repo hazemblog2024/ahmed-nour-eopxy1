@@ -33,14 +33,38 @@
 html {
   direction: rtl;
   scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Cairo', Arial, sans-serif;
+  font-family: 'Cairo', Arial, sans-serif !important;
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* تحسين الأداء للجوال */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* السماح بالتحديد للنصوص */
+p, span, h1, h2, h3, h4, h5, h6, a, li {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 /* تحسين النصوص العربية */
@@ -294,19 +318,23 @@ a {
   overflow: hidden;
 }
 
-/* تحسينات للجوال */
+/* تحسينات قوية للجوال */
 @media (max-width: 768px) {
   .container-custom {
     @apply px-3;
+    max-width: 100% !important;
   }
 
   body {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    overflow-x: hidden !important;
   }
 
   .btn-primary, .btn-secondary, .btn-outline {
     @apply py-2.5 px-4 text-sm;
+    min-height: 44px !important;
+    min-width: 44px !important;
   }
 
   /* تحسين سرعة التمرير */
@@ -317,10 +345,21 @@ a {
   /* تحسين النصوص للجوال */
   h1 {
     line-height: 1.2 !important;
+    font-size: 1.875rem !important; /* 30px */
   }
 
   h2, h3 {
     line-height: 1.3 !important;
+    font-size: 1.5rem !important; /* 24px */
+  }
+
+  h4, h5, h6 {
+    font-size: 1.25rem !important; /* 20px */
+  }
+
+  p {
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.5 !important;
   }
 
   /* تحسين المسافات */
@@ -328,16 +367,93 @@ a {
     margin-top: 0.75rem;
   }
 
+  .py-8 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .py-12 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .px-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
   /* تحسين الأزرار للجوال */
-  button, .btn {
-    min-height: 44px;
-    min-width: 44px;
+  button, .btn, a[class*="btn"] {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.875rem !important;
   }
 
   /* تحسين الصور للجوال */
   img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* تحسين العناصر المرنة */
+  .flex {
+    flex-wrap: wrap !important;
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* تحسين النصوص الكبيرة */
+  .text-6xl, .text-7xl, .text-8xl, .text-9xl {
+    font-size: 2.25rem !important; /* 36px */
+  }
+
+  .text-5xl {
+    font-size: 2rem !important; /* 32px */
+  }
+
+  .text-4xl {
+    font-size: 1.875rem !important; /* 30px */
+  }
+
+  .text-3xl {
+    font-size: 1.5rem !important; /* 24px */
+  }
+
+  .text-2xl {
+    font-size: 1.25rem !important; /* 20px */
+  }
+
+  .text-xl {
+    font-size: 1.125rem !important; /* 18px */
+  }
+
+  .text-lg {
+    font-size: 1rem !important; /* 16px */
+  }
+
+  .text-base {
+    font-size: 0.875rem !important; /* 14px */
+  }
+
+  .text-sm {
+    font-size: 0.75rem !important; /* 12px */
+  }
+
+  /* تحسين الحاويات */
+  .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl {
+    max-width: 100% !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  /* تحسين الهوامش */
+  .mx-auto {
+    margin-left: 0.75rem !important;
+    margin-right: 0.75rem !important;
   }
 }
 
@@ -357,46 +473,170 @@ a {
   }
 }
 
-/* تحسينات إضافية للجوال */
+/* تحسينات قوية للشاشات الصغيرة جداً */
 @media (max-width: 640px) {
   /* تحسين النصوص للشاشات الصغيرة جداً */
   .text-3xl {
-    font-size: 1.875rem !important;
+    font-size: 1.5rem !important; /* 24px */
   }
 
   .text-4xl {
-    font-size: 2.25rem !important;
+    font-size: 1.75rem !important; /* 28px */
   }
 
   .text-5xl {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important; /* 32px */
+  }
+
+  .text-6xl, .text-7xl {
+    font-size: 2rem !important; /* 32px */
   }
 
   /* تحسين المسافات */
   .py-8 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .py-12 {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
   }
 
-  .py-12 {
+  .py-16 {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
   }
 
+  .px-4, .px-6, .px-8 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
   /* تحسين الحاويات */
   .container-custom {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    max-width: 100% !important;
+  }
+
+  .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl {
+    max-width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   /* تحسين الأزرار */
   .rounded-2xl {
-    border-radius: 1rem !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .rounded-xl {
+    border-radius: 0.5rem !important;
   }
 
   /* تحسين النصوص */
   .leading-tight {
     line-height: 1.1 !important;
+  }
+
+  .leading-relaxed {
+    line-height: 1.4 !important;
+  }
+
+  /* تحسين الهوامش */
+  .mb-8, .mb-12, .mb-16 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mt-8, .mt-12, .mt-16 {
+    margin-top: 1rem !important;
+  }
+
+  /* تحسين الشبكة */
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* تحسين الفجوات */
+  .gap-8, .gap-12 {
+    gap: 0.75rem !important;
+  }
+
+  .gap-6 {
+    gap: 0.5rem !important;
+  }
+
+  /* تحسين العرض والارتفاع */
+  .w-full {
+    width: 100% !important;
+  }
+
+  .h-screen {
+    height: 100vh !important;
+  }
+
+  /* تحسين الخط */
+  body, * {
+    font-size: 14px !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important; /* 24px */
+  }
+
+  h2 {
+    font-size: 1.25rem !important; /* 20px */
+  }
+
+  h3 {
+    font-size: 1.125rem !important; /* 18px */
+  }
+
+  h4, h5, h6 {
+    font-size: 1rem !important; /* 16px */
+  }
+}
+
+/* تحسينات للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+  .container-custom {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+
+  .px-4, .px-6, .px-8 {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+
+  .text-3xl, .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+    font-size: 1.25rem !important; /* 20px */
+  }
+
+  .py-8, .py-12, .py-16 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  h1 {
+    font-size: 1.25rem !important; /* 20px */
+  }
+
+  h2, h3 {
+    font-size: 1.125rem !important; /* 18px */
+  }
+
+  h4, h5, h6 {
+    font-size: 1rem !important; /* 16px */
+  }
+
+  p, span, div {
+    font-size: 0.75rem !important; /* 12px */
   }
 }
 
@@ -428,5 +668,158 @@ a {
   /* إجبار خط Cairo على جميع عناصر HTML */
   html, body, div, span, p, h1, h2, h3, h4, h5, h6, a, button, input, textarea, select, option, label, li, td, th, strong, em, i, b {
     font-family: 'Cairo', sans-serif !important;
+  }
+}
+
+/* تحسينات نهائية للجوال */
+@media screen and (max-width: 768px) {
+  /* منع التكبير التلقائي في iOS */
+  input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    font-size: 16px !important;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  /* تحسين الأزرار للمس */
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    touch-action: manipulation;
+  }
+
+  /* تحسين التمرير */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  /* تحسين الصور */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  /* تحسين الفيديو */
+  video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* تحسين الجداول */
+  table {
+    width: 100% !important;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+
+  /* تحسين النصوص الطويلة */
+  .text-wrap {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* تحسين الحاويات المرنة */
+  .container, .container-fluid, .container-custom {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    max-width: 100% !important;
+  }
+
+  /* تحسين الشبكة */
+  .row {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+  }
+
+  .col, [class*="col-"] {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* تحسين المسافات */
+  .p-4, .p-5, .p-6 {
+    padding: 1rem !important;
+  }
+
+  .m-4, .m-5, .m-6 {
+    margin: 1rem !important;
+  }
+
+  /* تحسين الخطوط */
+  .display-1, .display-2, .display-3, .display-4 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* تحسين الأيقونات */
+  .icon, .fa, [class*="fa-"] {
+    font-size: 1.2rem !important;
+  }
+
+  /* تحسين النوافذ المنبثقة */
+  .modal, .popup, .overlay {
+    padding: 1rem !important;
+  }
+
+  /* تحسين القوائم */
+  .dropdown-menu {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* تحسين البطاقات */
+  .card {
+    margin-bottom: 1rem !important;
+  }
+
+  /* تحسين الأشرطة الجانبية */
+  .sidebar {
+    width: 100% !important;
+    position: relative !important;
+  }
+}
+
+/* تحسينات للشاشات الصغيرة جداً */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px !important;
+  }
+
+  body {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  .container-custom {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.3 !important;
+  }
+
+  p {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .btn, button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
   }
 }
