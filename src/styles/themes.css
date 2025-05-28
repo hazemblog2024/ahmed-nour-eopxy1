@@ -1,0 +1,208 @@
+/* ثيمات مختلفة للموقع */
+
+/* الثيم الفاتح (افتراضي) */
+.theme-light {
+  --primary-color: #0033a0;
+  --primary-600: #002d8f;
+  --primary-700: #00267e;
+  --gold-color: #d4af37;
+  --gold-600: #b8941f;
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+}
+
+/* تطبيق الثيم الفاتح على الجذر */
+.theme-light,
+.theme-light * {
+  --tw-bg-opacity: 1;
+}
+
+/* الثيم الداكن */
+.theme-dark {
+  --primary-color: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --gold-color: #fbbf24;
+  --gold-600: #f59e0b;
+  --background: #111827;
+  --surface: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  background-color: #111827 !important;
+  color: #f9fafb !important;
+}
+
+.theme-dark .bg-white {
+  background-color: #1f2937 !important;
+}
+
+.theme-dark .bg-gray-50 {
+  background-color: #111827 !important;
+}
+
+.theme-dark .text-gray-900 {
+  color: #f9fafb !important;
+}
+
+.theme-dark .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+/* الثيم الأزرق */
+.theme-blue {
+  --primary-color: #1e40af;
+  --primary-600: #1d4ed8;
+  --primary-700: #1e3a8a;
+  --gold-color: #06b6d4;
+  --gold-600: #0891b2;
+  --background: #f0f9ff;
+  --surface: #e0f2fe;
+  --text-primary: #0c4a6e;
+  --text-secondary: #0369a1;
+  background-color: #f0f9ff !important;
+  color: #0c4a6e !important;
+}
+
+.theme-blue .bg-primary {
+  background-color: #1e40af !important;
+}
+
+.theme-blue .bg-gold {
+  background-color: #06b6d4 !important;
+}
+
+/* الثيم الأخضر */
+.theme-green {
+  --primary-color: #059669;
+  --primary-600: #047857;
+  --primary-700: #065f46;
+  --gold-color: #10b981;
+  --gold-600: #059669;
+  --background: #f0fdf4;
+  --surface: #dcfce7;
+  --text-primary: #064e3b;
+  --text-secondary: #047857;
+  background-color: #f0fdf4 !important;
+  color: #064e3b !important;
+}
+
+.theme-green .bg-primary {
+  background-color: #059669 !important;
+}
+
+.theme-green .bg-gold {
+  background-color: #10b981 !important;
+}
+
+/* تطبيق المتغيرات على العناصر */
+:root {
+  --primary: var(--primary-color);
+  --primary-600: var(--primary-600);
+  --primary-700: var(--primary-700);
+  --gold: var(--gold-color);
+  --gold-600: var(--gold-600);
+}
+
+/* خلفيات ديناميكية */
+.bg-dynamic {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.text-dynamic {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* أزرار ديناميكية */
+.btn-dynamic {
+  background-color: var(--primary-color);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-dynamic:hover {
+  background-color: var(--primary-600);
+  transform: translateY(-2px);
+}
+
+/* كروت ديناميكية */
+.card-dynamic {
+  background-color: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.theme-dark .card-dynamic {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* تأثيرات الانتقال */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* تحسينات للثيم الداكن */
+.theme-dark .bg-white {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+}
+
+.theme-dark .text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.theme-dark .text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+.theme-dark .bg-gray-50 {
+  background-color: var(--background) !important;
+}
+
+/* تحسينات للثيمات الملونة */
+.theme-blue .bg-primary,
+.theme-green .bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.theme-blue .text-primary,
+.theme-green .text-primary {
+  color: var(--primary-color) !important;
+}
+
+.theme-blue .bg-gold,
+.theme-green .bg-gold {
+  background-color: var(--gold-color) !important;
+}
+
+/* انيميشن محسن للأداء */
+@keyframes themeTransition {
+  0% { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
+.theme-transition {
+  animation: themeTransition 0.3s ease-out;
+}
+
+/* تحسين الأداء */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* تقليل repaints */
+.theme-dark *,
+.theme-blue *,
+.theme-green * {
+  will-change: auto;
+}

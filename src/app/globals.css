@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap&font-display=swap');
+
+/* إجبار خط Cairo من البداية - أقوى إعدادات */
+* {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* إجبار خط Cairo على جميع عناصر Tailwind */
+.font-sans, .font-serif, .font-mono {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* إجبار خط Cairo على جميع أحجام النصوص */
+.text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl, .text-7xl, .text-8xl, .text-9xl {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Cairo', Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* تحسين النصوص العربية */
+.arabic-text {
+  font-family: 'Cairo', sans-serif;
+  text-align: right;
+  direction: rtl;
+}
+
+/* تطبيق خط Cairo على جميع العناصر */
+*, *::before, *::after {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+html, body {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* تحسين الأزرار */
+.btn-primary {
+  @apply bg-primary hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-gold hover:bg-gold-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+}
+
+/* تحسين الحاويات */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* تحسين الانيميشن */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* تحسين الصور */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 51, 160, 0.8), rgba(212, 175, 55, 0.8));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.image-overlay:hover::before {
+  opacity: 1;
+}
+
+/* تحسين الكروت */
+.card {
+  @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2;
+}
+
+/* تحسين الهيدر */
+.header-blur {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* تحسين النصوص المتدرجة */
+.gradient-text {
+  background: linear-gradient(135deg, #0033a0, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* تحسين الخطوط للعناوين */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif !important;
+  font-weight: 700;
+}
+
+/* تحسين النصوص */
+p, span, div, a, button, input, textarea, label, li, td, th, option, select {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* إجبار خط Cairo على جميع العناصر */
+.font-cairo, .font-cairo *, [class*="font-"] {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* كلاس font-arabic */
+.font-arabic, .font-arabic * {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* تطبيق خط Cairo على Tailwind classes */
+.text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl, .text-7xl, .text-8xl, .text-9xl {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* منع أي خط آخر */
+.font-sans, .font-serif, .font-mono {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* تطبيق خط Cairo على جميع عناصر React */
+[data-reactroot] *, [data-reactroot] {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* منع تغيير الخط أثناء التحميل */
+.font-loading {
+  font-family: 'Cairo', sans-serif !important;
+  font-display: swap;
+}
+
+/* تطبيق خط Cairo على جميع العناصر بقوة */
+html, body, body *, div, span, p, h1, h2, h3, h4, h5, h6, a, button, input, textarea, select, option, label, li, td, th {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* إجبار خط Cairo على جميع العناصر */
+* {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* منع استخدام خطوط أخرى */
+@font-face {
+  font-family: 'system-ui';
+  src: local('Cairo');
+}
+
+@font-face {
+  font-family: '-apple-system';
+  src: local('Cairo');
+}
+
+/* إخفاء النص حتى يتم تحميل الخط */
+.font-display-swap {
+  font-display: swap;
+}
+
+/* تحسين الروابط */
+a {
+  transition: all 0.3s ease;
+}
+
+/* تحسين الفوكس */
+*:focus {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* تحسين المقالات */
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.article-content p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.article-content ul {
+  margin: 1rem 0;
+  padding-right: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.article-content strong {
+  color: #0033a0;
+  font-weight: 600;
+}
+
+/* تحسين قراءة النصوص */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* تحسينات للجوال */
+@media (max-width: 768px) {
+  .container-custom {
+    @apply px-3;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .btn-primary, .btn-secondary, .btn-outline {
+    @apply py-2.5 px-4 text-sm;
+  }
+
+  /* تحسين سرعة التمرير */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* تحسين الأداء */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* تحسين الصور للجوال */
+@media (max-width: 768px) {
+  img {
+    image-rendering: optimizeSpeed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .rtl {
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+
+  /* تحسين الأداء */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* إجبار خط Cairo على جميع العناصر - الطبقة الأخيرة */
+  * {
+    font-family: 'Cairo', sans-serif !important;
+  }
+
+  /* إجبار خط Cairo على جميع عناصر HTML */
+  html, body, div, span, p, h1, h2, h3, h4, h5, h6, a, button, input, textarea, select, option, label, li, td, th, strong, em, i, b {
+    font-family: 'Cairo', sans-serif !important;
+  }
+}
