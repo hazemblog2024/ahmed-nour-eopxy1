@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://ahmed-nour-epoxy.com/sitemap.xml
+Sitemap: https://ahmed-nour-eopxy1.vercel.app/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
