@@ -302,6 +302,7 @@ a {
 
   body {
     font-size: 14px;
+    line-height: 1.5;
   }
 
   .btn-primary, .btn-secondary, .btn-outline {
@@ -311,6 +312,32 @@ a {
   /* تحسين سرعة التمرير */
   * {
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* تحسين النصوص للجوال */
+  h1 {
+    line-height: 1.2 !important;
+  }
+
+  h2, h3 {
+    line-height: 1.3 !important;
+  }
+
+  /* تحسين المسافات */
+  .space-y-4 > * + * {
+    margin-top: 0.75rem;
+  }
+
+  /* تحسين الأزرار للجوال */
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* تحسين الصور للجوال */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -327,6 +354,49 @@ a {
 @media (max-width: 768px) {
   img {
     image-rendering: optimizeSpeed;
+  }
+}
+
+/* تحسينات إضافية للجوال */
+@media (max-width: 640px) {
+  /* تحسين النصوص للشاشات الصغيرة جداً */
+  .text-3xl {
+    font-size: 1.875rem !important;
+  }
+
+  .text-4xl {
+    font-size: 2.25rem !important;
+  }
+
+  .text-5xl {
+    font-size: 2.5rem !important;
+  }
+
+  /* تحسين المسافات */
+  .py-8 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .py-12 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* تحسين الحاويات */
+  .container-custom {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  /* تحسين الأزرار */
+  .rounded-2xl {
+    border-radius: 1rem !important;
+  }
+
+  /* تحسين النصوص */
+  .leading-tight {
+    line-height: 1.1 !important;
   }
 }
 

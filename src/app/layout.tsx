@@ -124,7 +124,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
         <meta name="theme-color" content="#0033a0" />
         <meta name="google-site-verification" content="FBiMz6zQj-MuAD1n-R4anDiArI6BfrnvwqoN95fSc6s" />
 
