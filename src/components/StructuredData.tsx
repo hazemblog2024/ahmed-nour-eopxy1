@@ -4,9 +4,9 @@ const StructuredData = () => {
     "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
     "name": "شركة أحمد نور للإيبوكسي",
     "alternateName": ["Ahmed Nour Epoxy Company", "أحمد نور للإيبوكسي", "شركة أحمد نور للعزل"],
-    "url": "https://www.3azlepoxy.com",
-    "logo": "https://www.3azlepoxy.com/logo.png",
-    "image": "https://www.3azlepoxy.com/og-image.jpg",
+    "url": "https://ahmed-nour-eopxy1.vercel.app",
+    "logo": "https://ahmed-nour-eopxy1.vercel.app/logo.png",
+    "image": "https://ahmed-nour-eopxy1.vercel.app/og-image.jpg",
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -73,7 +73,7 @@ const StructuredData = () => {
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Contractor"],
     "name": "شركة أحمد نور للإيبوكسي",
     "alternateName": "أحمد نور للإيبوكسي - أفضل مقاول عزل معتمد في جدة",
-    "image": ["https://www.3azlepoxy.com/logo.png", "https://www.3azlepoxy.com/og-image.jpg"],
+    "image": ["https://ahmed-nour-eopxy1.vercel.app/logo.png", "https://ahmed-nour-eopxy1.vercel.app/og-image.jpg"],
     "telephone": "+966571935447",
     "email": "info@ahmed-nour-epoxy.com",
     "address": {
@@ -89,7 +89,7 @@ const StructuredData = () => {
       "latitude": 21.3891,
       "longitude": 39.8579
     },
-    "url": "https://www.3azlepoxy.com",
+    "url": "https://ahmed-nour-eopxy1.vercel.app",
     "description": "🏆 أفضل شركة عزل أسطح ومسابح معتمدة في جدة - خبرة +15 سنة - ضمان 10 سنوات - خدمة 24/7 - أسعار منافسة",
     "priceRange": "$$",
     "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
@@ -248,31 +248,31 @@ const StructuredData = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "الرئيسية",
-        "item": "https://www.3azlepoxy.com"
+        "item": "https://ahmed-nour-eopxy1.vercel.app"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "خدماتنا",
-        "item": "https://www.3azlepoxy.com/services"
+        "item": "https://ahmed-nour-eopxy1.vercel.app/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "معرض الأعمال",
-        "item": "https://www.3azlepoxy.com/portfolio"
+        "item": "https://ahmed-nour-eopxy1.vercel.app/portfolio"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "المدونة",
-        "item": "https://www.3azlepoxy.com/blog"
+        "item": "https://ahmed-nour-eopxy1.vercel.app/blog"
       },
       {
         "@type": "ListItem",
         "position": 5,
         "name": "تواصل معنا",
-        "item": "https://www.3azlepoxy.com/contact"
+        "item": "https://ahmed-nour-eopxy1.vercel.app/contact"
       }
     ]
   };

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل إعداد Google Search Console - شركة أحمد نور للإيبوكسي</title>
+    <style>
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0033a0;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #0033a0;
+            margin-top: 30px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-right: 4px solid #0033a0;
+            border-radius: 5px;
+        }
+        .verification-code {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 14px;
+            border: 1px solid #0033a0;
+            margin: 10px 0;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ffeaa7;
+        }
+        .link {
+            color: #0033a0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-right: 20px;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 دليل إعداد Google Search Console</h1>
+        <p style="text-align: center; font-size: 18px; color: #666;">
+            شركة أحمد نور للإيبوكسي - جدة
+        </p>
+
+        <div class="success">
+            <strong>✅ الموقع جاهز للربط مع Google Search Console!</strong><br>
+            جميع الإعدادات المطلوبة موجودة ومُحسنة.
+        </div>
+
+        <h2>📋 خطوات الربط السريع</h2>
+
+        <div class="step">
+            <h3>1️⃣ الدخول إلى Google Search Console</h3>
+            <ul>
+                <li>اذهب إلى: <a href="https://search.google.com/search-console/" class="link" target="_blank">Google Search Console</a></li>
+                <li>سجل الدخول بحساب Google الخاص بك</li>
+                <li>اضغط على "إضافة موقع" أو "Add Property"</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ إضافة الموقع</h3>
+            <ul>
+                <li>اختر "URL prefix" (بادئة URL)</li>
+                <li>أدخل رابط الموقع:</li>
+            </ul>
+            <div class="verification-code">
+                https://ahmed-nour-eopxy1.vercel.app
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>3️⃣ التحقق من الملكية</h3>
+            <ul>
+                <li>اختر طريقة "HTML tag" للتحقق</li>
+                <li>انسخ الكود التالي (موجود بالفعل في الموقع!):</li>
+            </ul>
+            <div class="verification-code">
+                FBiMz6zQj-MuAD1n-R4anDiArI6BfrnvwqoN95fSc6s
+            </div>
+            <div class="success">
+                ✅ هذا الكود موجود بالفعل في الموقع - فقط اضغط "Verify"
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>4️⃣ إرسال خريطة الموقع (Sitemap)</h3>
+            <ul>
+                <li>بعد التحقق من الملكية، اذهب إلى "Sitemaps"</li>
+                <li>أضف sitemap جديد:</li>
+            </ul>
+            <div class="verification-code">
+                https://ahmed-nour-eopxy1.vercel.app/sitemap.xml
+            </div>
+            <ul>
+                <li>اضغط "Submit" لإرسال خريطة الموقع</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>5️⃣ فحص robots.txt</h3>
+            <ul>
+                <li>تأكد من أن robots.txt يعمل بشكل صحيح:</li>
+            </ul>
+            <div class="verification-code">
+                https://ahmed-nour-eopxy1.vercel.app/robots.txt
+            </div>
+        </div>
+
+        <h2>📊 الملفات المُحسنة للـ SEO</h2>
+
+        <div class="step">
+            <h3>✅ الملفات الموجودة:</h3>
+            <ul>
+                <li><strong>Google Verification Tag:</strong> موجود في layout.tsx</li>
+                <li><strong>Sitemap.xml:</strong> خريطة موقع ديناميكية شاملة</li>
+                <li><strong>Robots.txt:</strong> ملف robots محسن</li>
+                <li><strong>Structured Data:</strong> بيانات منظمة للأعمال</li>
+                <li><strong>Meta Tags:</strong> علامات SEO متكاملة</li>
+                <li><strong>Open Graph:</strong> تحسين مشاركة وسائل التواصل</li>
+                <li><strong>Twitter Cards:</strong> بطاقات تويتر محسنة</li>
+            </ul>
+        </div>
+
+        <h2>🎯 الصفحات المُفهرسة</h2>
+
+        <div class="step">
+            <ul>
+                <li>الصفحة الرئيسية (Priority: 1.0)</li>
+                <li>صفحة الخدمات (Priority: 0.9)</li>
+                <li>صفحة من نحن (Priority: 0.8)</li>
+                <li>صفحة معرض الأعمال (Priority: 0.8)</li>
+                <li>صفحة المدونة (Priority: 0.7)</li>
+                <li>صفحة التواصل (Priority: 0.6)</li>
+                <li>مقالات المدونة (Priority: 0.6)</li>
+                <li>صفحات الخدمات التفصيلية (Priority: 0.7)</li>
+            </ul>
+        </div>
+
+        <h2>🚀 نصائح للمتابعة</h2>
+
+        <div class="step">
+            <h3>📈 مراقبة الأداء:</h3>
+            <ul>
+                <li>تابع "Performance" في Search Console أسبوعياً</li>
+                <li>راقب "Coverage" للتأكد من فهرسة جميع الصفحات</li>
+                <li>تحقق من "Mobile Usability" للتأكد من التوافق مع الجوال</li>
+                <li>راجع "Core Web Vitals" لتحسين سرعة الموقع</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ ملاحظة مهمة:</strong><br>
+            قد يستغرق ظهور البيانات في Google Search Console من 24-48 ساعة بعد التحقق من الملكية.
+        </div>
+
+        <h2>📞 معلومات الاتصال</h2>
+        <div class="step">
+            <ul>
+                <li><strong>الهاتف:</strong> +966571935447</li>
+                <li><strong>الموقع:</strong> <a href="https://ahmed-nour-eopxy1.vercel.app" class="link">ahmed-nour-eopxy1.vercel.app</a></li>
+                <li><strong>المطور:</strong> المهندس حازم الهواري</li>
+            </ul>
+        </div>
+
+        <div class="success">
+            <strong>🎉 تهانينا!</strong><br>
+            موقعك جاهز تماماً للربط مع Google Search Console وسيحقق نتائج ممتازة في محركات البحث!
+        </div>
+    </div>
+</body>
+</html>

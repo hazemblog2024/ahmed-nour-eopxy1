@@ -4,6 +4,7 @@ import "../styles/themes.css";
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import StructuredData from '@/components/StructuredData';
 import ClientScripts from '@/components/ClientScripts';
+import SEOOptimizer from '@/components/SEOOptimizer';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 
 export const metadata: Metadata = {
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.3azlepoxy.com'),
+  metadataBase: new URL('https://ahmed-nour-eopxy1.vercel.app'),
   alternates: {
     canonical: '/',
     languages: {
@@ -71,12 +72,12 @@ export const metadata: Metadata = {
     'business:contact_data:postal_code': '21589',
     'business:contact_data:country_name': 'المملكة العربية السعودية',
     'business:contact_data:phone_number': '+966571935447',
-    'business:contact_data:website': 'https://www.3azlepoxy.com',
+    'business:contact_data:website': 'https://ahmed-nour-eopxy1.vercel.app',
   },
   openGraph: {
     title: "🏆 أحمد نور للإيبوكسي - أفضل مقاول عزل أسطح ومسابح معتمد في جدة 2025",
     description: "⭐ شركة أحمد نور للإيبوكسي الرائدة في جدة - خبرة +15 سنة في عزل الأسطح والمسابح والخزانات، أرضيات إيبوكسي ثلاثية الأبعاد. ضمان 10 سنوات - خدمة 24/7 - أسعار منافسة 📞 +966571935447",
-    url: 'https://www.3azlepoxy.com',
+    url: 'https://ahmed-nour-eopxy1.vercel.app',
     siteName: 'شركة أحمد نور للإيبوكسي',
     images: [
       {
@@ -148,7 +149,7 @@ export default function RootLayout({
         <meta property="business:contact_data:postal_code" content="21589" />
         <meta property="business:contact_data:country_name" content="المملكة العربية السعودية" />
         <meta property="business:contact_data:phone_number" content="+966571935447" />
-        <meta property="business:contact_data:website" content="https://www.3azlepoxy.com" />
+        <meta property="business:contact_data:website" content="https://ahmed-nour-eopxy1.vercel.app" />
 
         {/* Additional SEO */}
         <meta name="mobile-web-app-capable" content="yes" />
@@ -174,6 +175,7 @@ export default function RootLayout({
       <body className="font-arabic antialiased font-cairo">
         <ThemeProvider>
           <GoogleAnalytics />
+          <SEOOptimizer />
           <ClientScripts />
           {children}
         </ThemeProvider>
