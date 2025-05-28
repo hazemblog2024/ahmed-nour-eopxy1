@@ -8,18 +8,18 @@
 
 ### 2. إضافة الموقع
 - اضغط على "إضافة موقع" أو "Add Property"
-- اختر "URL prefix" 
+- اختر "URL prefix"
 - أدخل رابط الموقع: `https://ahmed-nour-eopxy1.vercel.app`
 
 ### 3. التحقق من الملكية
 الموقع يحتوي على verification tag جاهز:
 ```html
-<meta name="google-site-verification" content="FBiMz6zQj-MuAD1n-R4anDiArI6BfrnvwqoN95fSc6s" />
+<meta name="google-site-verification" content="PSBsCFxZwITZldbvh1gP3ozluXeMCsqL8vdJTRsR9vw" />
 ```
 
 **خطوات التحقق:**
 1. اختر "HTML tag" كطريقة التحقق
-2. انسخ الكود: `FBiMz6zQj-MuAD1n-R4anDiArI6BfrnvwqoN95fSc6s`
+2. انسخ الكود: `PSBsCFxZwITZldbvh1gP3ozluXeMCsqL8vdJTRsR9vw`
 3. تأكد أن الكود موجود في الموقع (موجود بالفعل!)
 4. اضغط "Verify"
 

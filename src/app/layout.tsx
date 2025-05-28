@@ -101,19 +101,8 @@ export const metadata: Metadata = {
     creator: '@ahmed_nour_epoxy',
     site: '@ahmed_nour_epoxy',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
   verification: {
-    google: 'FBiMz6zQj-MuAD1n-R4anDiArI6BfrnvwqoN95fSc6s',
+    google: 'PSBsCFxZwITZldbvh1gP3ozluXeMCsqL8vdJTRsR9vw',
   },
 };
 
@@ -127,7 +116,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1, user-scalable=yes, viewport-fit=cover" />
         <meta name="theme-color" content="#0033a0" />
-        <meta name="google-site-verification" content="FBiMz6zQj-MuAD1n-R4anDiArI6BfrnvwqoN95fSc6s" />
+        <meta name="google-site-verification" content="PSBsCFxZwITZldbvh1gP3ozluXeMCsqL8vdJTRsR9vw" />
 
         {/* SEO Meta Tags المتقدمة */}
         <meta name="geo.region" content="SA-02" />
