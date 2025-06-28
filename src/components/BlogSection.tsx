@@ -373,3 +373,4 @@ const BlogSection = () => {
 };
 
 export default BlogSection;
+// تحديث إجباري للدومين المدفوع
