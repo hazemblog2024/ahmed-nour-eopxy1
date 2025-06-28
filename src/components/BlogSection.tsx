@@ -4,7 +4,178 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, User, Clock, Search } from 'lucide-react';
-import { allArticles } from '@/data/articles';
+
+// بيانات المقالات مباشرة في الملف لضمان العمل
+const allArticles = [
+  {
+    id: 1,
+    title: 'دليل شامل لعزل الأسطح في المملكة العربية السعودية 2025',
+    slug: 'roof-insulation-guide-saudi-arabia',
+    excerpt: 'تعرف على أفضل طرق عزل الأسطح في السعودية، المواد المستخدمة، والتكاليف المتوقعة مع نصائح الخبراء.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/J0MGJ11Q/roof-insulation-team-jeddah-jpg.jpg',
+    category: 'roofing',
+    author: 'أحمد نور',
+    publishDate: '2025-01-15',
+    readTime: '8 دقائق',
+    featured: true,
+    tags: ['عزل الأسطح', 'السعودية', 'مواد العزل']
+  },
+  {
+    id: 2,
+    title: 'أرضيات الإيبوكسي ثلاثية الأبعاد: الدليل الكامل',
+    slug: 'epoxy-3d-flooring-complete-guide',
+    excerpt: 'اكتشف عالم أرضيات الإيبوكسي ثلاثية الأبعاد، مميزاتها، طرق التركيب، والتكاليف في السوق السعودي.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/MZsbb4QY/3d-epoxy-floor-glossy-jpg.jpg',
+    category: 'epoxy',
+    author: 'أحمد نور',
+    publishDate: '2025-01-10',
+    readTime: '12 دقيقة',
+    featured: true,
+    tags: ['إيبوكسي', 'أرضيات ثلاثية الأبعاد', 'ديكور']
+  },
+  {
+    id: 3,
+    title: 'كيفية اكتشاف تسرب المياه في المسابح وإصلاحه',
+    slug: 'pool-leak-detection-repair',
+    excerpt: 'دليل شامل لاكتشاف وإصلاح تسريبات المسابح، العلامات التحذيرية، وطرق الوقاية الفعالة.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/Ls1gfQMN/pool-leak-detection.jpg',
+    category: 'pools',
+    author: 'أحمد نور',
+    publishDate: '2025-01-05',
+    readTime: '6 دقائق',
+    featured: false,
+    tags: ['مسابح', 'تسرب المياه', 'صيانة']
+  },
+  {
+    id: 4,
+    title: '5 أخطاء شائعة في عزل الخزانات وكيفية تجنبها',
+    slug: 'tank-insulation-common-mistakes',
+    excerpt: 'تعرف على الأخطاء الشائعة في عزل خزانات المياه وكيفية تجنبها لضمان عزل فعال وطويل الأمد.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/nLkn9qPC/water-tank-insulation-jpg.jpg',
+    category: 'maintenance',
+    author: 'أحمد نور',
+    publishDate: '2025-01-01',
+    readTime: '5 دقائق',
+    featured: false,
+    tags: ['خزانات المياه', 'عزل', 'صيانة']
+  },
+  {
+    id: 5,
+    title: 'أفضل مواد العزل المائي للأسطح في جدة',
+    slug: 'best-waterproofing-materials-jeddah',
+    excerpt: 'مقارنة شاملة لأفضل مواد العزل المائي المناسبة لمناخ جدة مع الأسعار والمميزات.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/gctxrbC3/roof-insulation-materials.jpg',
+    category: 'roofing',
+    author: 'أحمد نور',
+    publishDate: '2024-12-28',
+    readTime: '7 دقائق',
+    featured: false,
+    tags: ['مواد العزل', 'جدة', 'عزل مائي']
+  },
+  {
+    id: 6,
+    title: 'تكلفة عزل الأسطح في السعودية 2025',
+    slug: 'roof-insulation-cost-saudi-2025',
+    excerpt: 'دليل شامل لتكاليف عزل الأسطح في السعودية، العوامل المؤثرة على السعر، ونصائح لتوفير التكاليف.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/J0MGJ11Q/roof-insulation-team-jeddah-jpg.jpg',
+    category: 'roofing',
+    author: 'أحمد نور',
+    publishDate: '2024-12-25',
+    readTime: '9 دقائق',
+    featured: false,
+    tags: ['تكلفة العزل', 'السعودية', 'أسعار']
+  },
+  {
+    id: 7,
+    title: 'مقارنة بين الإيبوكسي والسيراميك للأرضيات',
+    slug: 'epoxy-vs-ceramic-flooring-comparison',
+    excerpt: 'مقارنة تفصيلية بين أرضيات الإيبوكسي والسيراميك من حيث التكلفة، المتانة، والصيانة.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/MZsbb4QY/3d-epoxy-floor-glossy-jpg.jpg',
+    category: 'epoxy',
+    author: 'أحمد نور',
+    publishDate: '2024-12-20',
+    readTime: '10 دقائق',
+    featured: true,
+    tags: ['إيبوكسي', 'سيراميك', 'مقارنة']
+  },
+  {
+    id: 8,
+    title: 'علامات تحذيرية تدل على الحاجة لعزل السطح',
+    slug: 'roof-insulation-warning-signs',
+    excerpt: 'تعرف على العلامات التي تدل على ضرورة عزل السطح فور<|im_start|> لتجنب المشاكل الأكبر.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/J0MGJ11Q/roof-insulation-team-jeddah-jpg.jpg',
+    category: 'roofing',
+    author: 'أحمد نور',
+    publishDate: '2024-12-15',
+    readTime: '6 دقائق',
+    featured: false,
+    tags: ['علامات التحذير', 'عزل الأسطح', 'صيانة']
+  },
+  {
+    id: 9,
+    title: 'الفرق بين العزل المائي والعزل الحراري',
+    slug: 'waterproof-vs-thermal-insulation',
+    excerpt: 'شرح مفصل للفروقات بين العزل المائي والحراري، متى نحتاج كل نوع، والمواد المستخدمة.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/nLkn9qPC/water-tank-insulation-jpg.jpg',
+    category: 'roofing',
+    author: 'أحمد نور',
+    publishDate: '2024-12-10',
+    readTime: '8 دقائق',
+    featured: false,
+    tags: ['عزل مائي', 'عزل حراري', 'أنواع العزل']
+  },
+  {
+    id: 10,
+    title: 'أحدث تصاميم الإيبوكسي ثلاثي الأبعاد 2025',
+    slug: 'latest-3d-epoxy-designs-2025',
+    excerpt: 'استكشف أحدث وأجمل تصاميم الإيبوكسي ثلاثي الأبعاد لعام 2025 مع أفكار إبداعية للمنازل والمكاتب.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/MZsbb4QY/3d-epoxy-floor-glossy-jpg.jpg',
+    category: 'epoxy',
+    author: 'أحمد نور',
+    publishDate: '2024-12-05',
+    readTime: '11 دقيقة',
+    featured: true,
+    tags: ['تصاميم حديثة', 'إيبوكسي ثلاثي الأبعاد', '2025']
+  },
+  {
+    id: 11,
+    title: 'صيانة المسابح في فصل الصيف: دليل شامل',
+    slug: 'pool-maintenance-summer-guide',
+    excerpt: 'نصائح مهمة لصيانة المسابح خلال فصل الصيف في السعودية، التنظيف، والمواد الكيميائية.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/Ls1gfQMN/pool-leak-detection.jpg',
+    category: 'pools',
+    author: 'أحمد نور',
+    publishDate: '2024-11-30',
+    readTime: '7 دقائق',
+    featured: false,
+    tags: ['صيانة المسابح', 'الصيف', 'تنظيف']
+  },
+  {
+    id: 12,
+    title: 'مقارنة شاملة بين مواد العزل المختلفة',
+    slug: 'insulation-materials-comprehensive-comparison',
+    excerpt: 'مقارنة تفصيلية بين جميع أنواع مواد العزل المتاحة في السوق السعودي مع المميزات والعيوب.',
+    content: 'محتوى المقال الكامل...',
+    image: 'https://i.postimg.cc/gctxrbC3/roof-insulation-materials.jpg',
+    category: 'roofing',
+    author: 'أحمد نور',
+    publishDate: '2024-11-25',
+    readTime: '13 دقيقة',
+    featured: false,
+    tags: ['مواد العزل', 'مقارنة', 'أنواع العزل']
+  }
+];
 
 const BlogSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
