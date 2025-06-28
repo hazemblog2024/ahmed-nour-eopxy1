@@ -164,6 +164,57 @@ export default function RootLayout({
           `
         }} />
 
+        {/* Schema Markup للموقع */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "شركة أحمد نور للإيبوكسي",
+      "description": "أفضل شركة عزل أسطح ومسابح في جدة",
+      "url": "https://www.3azlepoxy.com",
+      "telephone": "+966571935447",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "جدة",
+        "addressRegion": "منطقة مكة المكرمة",
+        "addressCountry": "SA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "21.5433",
+        "longitude": "39.1728"
+      },
+      "sameAs": [
+        "https://wa.me/966571935447",
+        "https://g.co/kgs/h1tbAjS"
+      ]
+    })
+  }}
+/>
+
+{/* Schema للمقالات */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "مدونة أحمد نور للإيبوكسي",
+      "description": "مقالات متخصصة في العزل والإيبوكسي",
+      "url": "https://www.3azlepoxy.com/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "شركة أحمد نور للإيبوكسي",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.3azlepoxy.com/logo.png"
+        }
+      }
+    })
+  }}
+/>
         <StructuredData />
       </head>
       <body className="font-arabic antialiased font-cairo">
