@@ -28,8 +28,8 @@ const HeroSection = () => {
         {/* صورة الخلفية */}
         <div className="absolute inset-0 opacity-20 sm:opacity-30">
           <Image
-            src="https://i.postimg.cc/RFcWN3zF/epoxy-roof-insulation-company-jeddah.jpg"
-            alt="أحمد نور للإيبوكسي - خدمات العزل والأرضيات الإيبوكسية في جدة"
+            src="https://i.postimg.cc/J0MGJ11Q/roof-insulation-team-jeddah-jpg.jpg"
+            alt="فريق عمل شركة أحمد نور للإيبوكسي - خبراء عزل الأسطح في جدة"
             fill
             className="object-cover object-center"
             priority

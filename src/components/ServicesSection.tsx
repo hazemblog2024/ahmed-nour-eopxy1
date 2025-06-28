@@ -182,10 +182,13 @@ const ServicesSection = () => {
                             <span className="text-gray-700">{feature}</span>
                           </div>
                         ))}
-                        <button className="mt-4 text-primary hover:text-primary-600 font-semibold flex items-center gap-2 transition-colors">
+                        <a
+                          href="/services"
+                          className="mt-4 text-primary hover:text-primary-600 font-semibold flex items-center gap-2 transition-colors inline-flex"
+                        >
                           اعرف المزيد
                           <span className="text-lg">←</span>
-                        </button>
+                        </a>
                       </div>
                     )}
                   </div>

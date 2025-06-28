@@ -62,7 +62,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pool-leak-detection-repair',
     'tank-insulation-common-mistakes',
     'insulation-materials-comparison',
-    'epoxy-flooring-maintenance-guide'
+    'epoxy-flooring-maintenance-guide',
+    'best-roof-insulation-materials-hot-climate-jeddah',
+    'roof-insulation-cost-jeddah-2025',
+    'epoxy-vs-ceramic-flooring-comparison',
+    'signs-roof-needs-insulation-immediately',
+    'difference-water-thermal-insulation',
+    'latest-3d-epoxy-designs-2025'
   ];
 
   const blogRoutes = blogPosts.map((slug) => ({
@@ -82,8 +88,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ac-maintenance',
     'demolition-renovation',
     'plumbing-services',
-    'water-leak-detection'
+    'water-leak-detection',
+    'roof-insulation-jeddah',
+    'pool-insulation-jeddah',
+    'tank-insulation-jeddah',
+    '3d-epoxy-flooring-jeddah'
   ];
+
+  // صفحات المناطق الجغرافية
+  const areas = [
+    'north-jeddah',
+    'south-jeddah',
+    'east-jeddah',
+    'west-jeddah'
+  ];
+
+  const areaRoutes = areas.map((area) => ({
+    url: `${baseUrl}/areas/${area}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  // صفحات إضافية
+  const additionalPages = [
+    { path: 'faq', priority: 0.7 },
+    { path: 'faq/roof-insulation', priority: 0.7 },
+    { path: 'comparison', priority: 0.8 },
+    { path: 'pricing', priority: 0.8 },
+    { path: 'reviews', priority: 0.8 }
+  ];
+
+  const additionalRoutes = additionalPages.map((page) => ({
+    url: `${baseUrl}/${page.path}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: page.priority,
+  }));
 
   const serviceRoutes = services.map((service) => ({
     url: `${baseUrl}/services/${service}`,
@@ -92,5 +133,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...routes, ...blogRoutes, ...serviceRoutes];
+  return [...routes, ...blogRoutes, ...serviceRoutes, ...areaRoutes, ...additionalRoutes];
 }

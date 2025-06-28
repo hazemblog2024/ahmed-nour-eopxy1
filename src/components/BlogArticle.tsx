@@ -71,21 +71,21 @@ const BlogArticle = ({ article }: Props) => {
       id: 2,
       title: 'أرضيات الإيبوكسي ثلاثية الأبعاد: الدليل الكامل',
       slug: 'epoxy-3d-flooring-complete-guide',
-      image: 'https://drive.google.com/uc?export=view&id=1pvDKXN4VQbm1qQwM_PALNyKtIbD3u525',
+      image: 'https://i.postimg.cc/MZsbb4QY/3d-epoxy-floor-glossy-jpg.jpg',
       readTime: '12 دقيقة'
     },
     {
       id: 3,
       title: 'كيفية اكتشاف تسرب المياه في المسابح',
       slug: 'pool-leak-detection-repair',
-      image: 'https://drive.google.com/uc?export=view&id=1-mQ5BNyOKCb3qnBSV1603SRTHnC0h-0w',
+      image: 'https://i.postimg.cc/Ls1gfQMN/pool-leak-detection.jpg',
       readTime: '6 دقائق'
     },
     {
       id: 4,
       title: '5 أخطاء شائعة في عزل الخزانات',
       slug: 'tank-insulation-common-mistakes',
-      image: 'https://drive.google.com/uc?export=view&id=15pRVuViCXc7c3HmNFhycUVYM-Nlg3yk-',
+      image: 'https://i.postimg.cc/nLkn9qPC/water-tank-insulation-jpg.jpg',
       readTime: '5 دقائق'
     }
   ];

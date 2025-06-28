@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.3azlepoxy.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /blog
+Allow: /contact
+Allow: /portfolio
+Allow: /services/*
+Allow: /blog/*
+
+# Crawl delay (optional)
+Crawl-delay: 1
