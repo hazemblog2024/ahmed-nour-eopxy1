@@ -92,8 +92,8 @@ const AboutSection = () => {
           <div className="relative">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1dI2tFAqXPRphDwPEvQGRac7ED1sWSVzS"
-                alt="فريق عمل أحمد نور للإيبوكسي"
+                src="https://i.postimg.cc/J0MGJ11Q/roof-insulation-team-jeddah-jpg.jpg"
+                alt="فريق عمل شركة أحمد نور للإيبوكسي - خبراء عزل الأسطح في جدة"
                 fill
                 className="object-cover"
               />

@@ -3,6 +3,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import ContactSection from '@/components/ContactSection';
+// import { LocalBusinessInfo, InteractiveMap, GoogleMyBusinessWidget } from '@/components/LocalSEO';
+import { MobileCallButtons } from '@/components/MobileOptimized';
+import NoSSR from '@/components/NoSSR';
 
 export const metadata: Metadata = {
   title: 'تواصل معنا - شركة أحمد نور للإيبوكسي | استشارة مجانية وعرض سعر فوري في جدة',
@@ -100,9 +103,24 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+
+        {/* قسم معلومات الأعمال المحلية */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            {/* <div className="grid lg:grid-cols-2 gap-8 mb-8">
+              <LocalBusinessInfo />
+              <GoogleMyBusinessWidget />
+            </div>
+            <InteractiveMap /> */}
+          </div>
+        </section>
       </main>
       <Footer />
-      <FloatingButtons />
+
+      <NoSSR>
+        <FloatingButtons />
+        <MobileCallButtons />
+      </NoSSR>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
-import BlogSection from '@/components/BlogSection';
+import SimpleBlogSection from '@/components/SimpleBlogSection';
 
 export const metadata: Metadata = {
   title: 'المدونة - أحمد نور للإيبوكسي | مقالات ونصائح العزل والأرضيات الإيبوكسية',
@@ -41,7 +41,7 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <BlogSection />
+        <SimpleBlogSection />
       </main>
       <Footer />
       <FloatingButtons />

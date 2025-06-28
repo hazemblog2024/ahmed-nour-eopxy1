@@ -10,15 +10,15 @@ const BlogSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = [
-    { id: 'all', name: 'جميع المقالات', count: 6 },
-    { id: 'roofing', name: 'عزل الأسطح', count: 2 },
-    { id: 'pools', name: 'عزل المسابح', count: 1 },
-    { id: 'epoxy', name: 'أرضيات إيبوكسي', count: 2 },
-    { id: 'maintenance', name: 'الصيانة', count: 1 }
-  ];
-
   const articles = allArticles;
+
+  const categories = [
+    { id: 'all', name: 'جميع المقالات', count: articles.length },
+    { id: 'roofing', name: 'عزل الأسطح', count: articles.filter(a => a.category === 'roofing').length },
+    { id: 'pools', name: 'عزل المسابح', count: articles.filter(a => a.category === 'pools').length },
+    { id: 'epoxy', name: 'أرضيات إيبوكسي', count: articles.filter(a => a.category === 'epoxy').length },
+    { id: 'maintenance', name: 'الصيانة', count: articles.filter(a => a.category === 'maintenance').length }
+  ];
 
   const filteredArticles = articles.filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -72,8 +72,8 @@ const BlogSection = () => {
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">المقالات المميزة</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   {featuredArticles.map(article => (
-                    <article key={article.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                      <div className="relative h-48">
+                    <article key={article.id} className="blog-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                      <div className="image-container relative h-32 sm:h-40 md:h-48">
                         <Image
                           src={article.image}
                           alt={article.title}
@@ -85,7 +85,7 @@ const BlogSection = () => {
                         </div>
                       </div>
 
-                      <div className="p-6">
+                      <div className="blog-content p-4 sm:p-6">
                         <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
@@ -97,11 +97,36 @@ const BlogSection = () => {
                           </div>
                         </div>
 
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                        <h3
+                          className="text-base sm:text-lg md:text-xl font-bold mb-3 leading-tight"
+                          style={{
+                            display: 'block !important',
+                            visibility: 'visible !important',
+                            opacity: '1 !important',
+                            color: '#111827 !important',
+                            fontWeight: '700 !important',
+                            lineHeight: '1.4 !important',
+                            marginBottom: '0.75rem !important',
+                            height: 'auto !important',
+                            maxHeight: 'none !important',
+                            overflow: 'visible !important'
+                          }}
+                        >
                           {article.title}
                         </h3>
 
-                        <p className="text-gray-600 mb-4 line-clamp-3">
+                        <p
+                          className="text-sm sm:text-base mb-3 sm:mb-4"
+                          style={{
+                            display: 'block !important',
+                            visibility: 'visible !important',
+                            opacity: '1 !important',
+                            color: '#6b7280 !important',
+                            height: 'auto !important',
+                            maxHeight: 'none !important',
+                            overflow: 'visible !important'
+                          }}
+                        >
                           {article.excerpt}
                         </p>
 
@@ -137,7 +162,7 @@ const BlogSection = () => {
                   <article key={article.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div className="md:flex">
                       <div className="md:w-1/3">
-                        <div className="relative h-48 md:h-full">
+                        <div className="relative h-32 sm:h-40 md:h-full">
                           <Image
                             src={article.image}
                             alt={article.title}
@@ -147,7 +172,7 @@ const BlogSection = () => {
                         </div>
                       </div>
 
-                      <div className="md:w-2/3 p-6">
+                      <div className="md:w-2/3 p-4 sm:p-6">
                         <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
@@ -163,7 +188,21 @@ const BlogSection = () => {
                           </div>
                         </div>
 
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                        <h3
+                          className="text-base sm:text-lg md:text-2xl font-bold mb-3 leading-tight"
+                          style={{
+                            display: 'block !important',
+                            visibility: 'visible !important',
+                            opacity: '1 !important',
+                            color: '#111827 !important',
+                            fontWeight: '700 !important',
+                            lineHeight: '1.4 !important',
+                            marginBottom: '0.75rem !important',
+                            height: 'auto !important',
+                            maxHeight: 'none !important',
+                            overflow: 'visible !important'
+                          }}
+                        >
                           {article.title}
                         </h3>
 

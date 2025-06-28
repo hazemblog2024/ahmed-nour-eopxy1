@@ -5,6 +5,10 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 import StructuredData from '@/components/StructuredData';
 import ClientScripts from '@/components/ClientScripts';
 import SEOOptimizer from '@/components/SEOOptimizer';
+// import WebVitals from '@/components/WebVitals';
+import NetworkOptimizer from '@/components/NetworkOptimizer';
+// import PerformanceOptimizer, { PerformanceMonitor, FontOptimizer } from '@/components/PerformanceOptimizer';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 
 export const metadata: Metadata = {
@@ -165,13 +169,20 @@ export default function RootLayout({
         }} />
 
         <StructuredData />
+        <LocalBusinessSchema />
       </head>
       <body className="font-arabic antialiased font-cairo">
         <ThemeProvider>
           <GoogleAnalytics />
+          {/* <WebVitals /> */}
           <SEOOptimizer />
           <ClientScripts />
-          {children}
+          {/* <PerformanceOptimizer />
+          <FontOptimizer />
+          <PerformanceMonitor /> */}
+          <NetworkOptimizer>
+            {children}
+          </NetworkOptimizer>
         </ThemeProvider>
       </body>
     </html>

@@ -247,7 +247,7 @@ export const articles: Article[] = [
     author: 'م. سارة أحمد',
     publishDate: '10 يناير 2024',
     readTime: '12 دقيقة',
-    image: 'https://i.postimg.cc/05dmc4K4/3d-epoxy-floor-complete-guide.jpg',
+    image: 'https://i.postimg.cc/MZsbb4QY/3d-epoxy-floor-glossy-jpg.jpg',
     tags: ['أرضيات إيبوكسي', 'ثلاثي الأبعاد', 'تصميم', 'ديكور'],
     featured: true,
     views: 980

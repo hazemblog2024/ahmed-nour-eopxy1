@@ -277,6 +277,65 @@ const StructuredData = () => {
     ]
   };
 
+  // إضافة WebSite Schema
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "شركة أحمد نور للإيبوكسي",
+    "alternateName": "أحمد نور للإيبوكسي - أفضل مقاول عزل في جدة",
+    "url": "https://www.3azlepoxy.com",
+    "description": "أفضل شركة عزل أسطح ومسابح في جدة - خبرة +15 سنة - ضمان شامل",
+    "inLanguage": "ar",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.3azlepoxy.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "شركة أحمد نور للإيبوكسي",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.3azlepoxy.com/logo.png"
+      }
+    }
+  };
+
+  // إضافة Professional Service Schema
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "شركة أحمد نور للإيبوكسي",
+    "description": "خدمات عزل احترافية وأرضيات إيبوكسي في جدة",
+    "serviceType": ["عزل الأسطح", "عزل المسابح", "أرضيات الإيبوكسي"],
+    "provider": {
+      "@type": "Organization",
+      "name": "شركة أحمد نور للإيبوكسي"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "جدة",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "منطقة مكة المكرمة",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "المملكة العربية السعودية"
+          }
+        }
+      }
+    ],
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "servicePhone": "+966571935447",
+      "serviceUrl": "https://www.3azlepoxy.com"
+    }
+  };
+
   // إضافة FAQ Schema للأسئلة الشائعة
   const faqSchema = {
     "@context": "https://schema.org",
@@ -305,6 +364,124 @@ const StructuredData = () => {
           "@type": "Answer",
           "text": "نعم، نقدم ضمان شامل لمدة 10 سنوات على جميع أعمال العزل مع خدمة صيانة مجانية وفريق دعم فني متاح 24/7."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي أفضل مواد عزل الأسطح في جدة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "أفضل مواد عزل الأسطح في جدة هي البولي يوريثان والأغشية البوليمرية والبيتومين المعدل، حيث تتحمل المناخ الحار والرطوبة العالية."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم تستغرق مدة عزل السطح؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تستغرق مدة عزل السطح من 3-7 أيام حسب المساحة ونوع العزل المطلوب. نلتزم بالمواعيد المحددة ونعمل بكفاءة عالية."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل تقدمون خدمة كشف تسريبات المياه؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نقدم خدمة كشف تسريبات المياه بأحدث الأجهزة الإلكترونية بدون تكسير أو حفر، مع تحديد مكان التسرب بدقة عالية."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي أسعار أرضيات الإيبوكسي ثلاثية الأبعاد؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "أسعار أرضيات الإيبوكسي ثلاثية الأبعاد تبدأ من 150 ريال للمتر المربع حسب التصميم والجودة. نقدم عروض أسعار مجانية مع إمكانية المعاينة."
+        }
+      }
+    ]
+  };
+
+  // إضافة Product Schema للخدمات
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "خدمات عزل الأسطح في جدة",
+    "description": "خدمات عزل أسطح احترافية في جدة بأحدث المواد والتقنيات مع ضمان 10 سنوات",
+    "brand": {
+      "@type": "Brand",
+      "name": "شركة أحمد نور للإيبوكسي"
+    },
+    "category": "خدمات العزل والبناء",
+    "offers": {
+      "@type": "Offer",
+      "price": "50",
+      "priceCurrency": "SAR",
+      "priceValidUntil": "2025-12-31",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "شركة أحمد نور للإيبوكسي"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "جدة"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "156",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
+  // إضافة How-to Schema
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "كيفية اختيار أفضل شركة عزل أسطح في جدة",
+    "description": "دليل شامل لاختيار أفضل شركة عزل أسطح موثوقة في جدة",
+    "image": "https://www.3azlepoxy.com/images/how-to-choose-insulation-company.jpg",
+    "totalTime": "PT30M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "SAR",
+      "value": "0"
+    },
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "قائمة بأسماء الشركات المحلية"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "معايير التقييم والمقارنة"
+      }
+    ],
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "الإنترنت للبحث والمراجعات"
+      }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "البحث عن الشركات المحلية",
+        "text": "ابحث عن شركات العزل المحلية في جدة واجمع قائمة بالخيارات المتاحة",
+        "url": "https://www.3azlepoxy.com/blog"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "التحقق من الخبرة والسمعة",
+        "text": "تأكد من خبرة الشركة وسمعتها في السوق من خلال المراجعات والتوصيات",
+        "url": "https://www.3azlepoxy.com/about"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "طلب عروض أسعار",
+        "text": "اطلب عروض أسعار من عدة شركات وقارن بين الأسعار والخدمات المقدمة",
+        "url": "https://www.3azlepoxy.com/contact"
       }
     ]
   };
@@ -339,6 +516,30 @@ const StructuredData = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(professionalServiceSchema)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToSchema)
         }}
       />
     </>

@@ -15,6 +15,116 @@
   font-family: 'Cairo', sans-serif !important;
 }
 
+/* إصلاح مشكلة line-clamp - معطل مؤقتاً */
+/* .line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+} */
+
+/* إجبار ظهور عناوين المدونة في الموبايل */
+@media (max-width: 640px) {
+  .blog-card h3 {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.75rem !important;
+    color: #111827 !important;
+    font-weight: 700 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .blog-card p {
+    font-size: 0.875rem !important;
+    color: #6b7280 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .blog-content {
+    padding: 1rem !important;
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+}
+
+/* إجبار ظهور النصوص في جميع الأحوال */
+.blog-card h3 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #111827 !important;
+  font-weight: 700 !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.blog-card p {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #6b7280 !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* إصلاح خاص للموبايل - فصل المحتوى عن الصور */
+@media (max-width: 768px) {
+  .blog-card {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .blog-card > div:first-child {
+    flex-shrink: 0 !important;
+    height: 180px !important;
+    width: 100% !important;
+  }
+
+  .blog-card > div:last-child {
+    flex: 1 !important;
+    background-color: white !important;
+    padding: 20px !important;
+    margin-top: 0 !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .blog-card h3 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    background-color: white !important;
+    position: relative !important;
+    z-index: 20 !important;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
