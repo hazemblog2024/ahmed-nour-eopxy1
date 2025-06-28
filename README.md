@@ -39,7 +39,7 @@ npm install
 npm run dev
 
 # فتح المتصفح على
-http://localhost:3001
+http://localhost:3001 
 ```
 
 ## 📱 معلومات التواصل
