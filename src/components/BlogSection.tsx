@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, User, Clock, Search } from 'lucide-react';
-import { allArticles } from '@/data/articles-extended';
+import { allArticles } from '@/data/articles';
+
 const BlogSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -73,8 +74,7 @@ const BlogSection = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {featuredArticles.map(article => (
                 <article key={article.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                  {/* الصورة */}
-                  <div className="relative w-full" style={{ height: '180px' }}>
+                  <div className="relative w-full h-48">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -86,14 +86,7 @@ const BlogSection = () => {
                     </div>
                   </div>
 
-                  {/* المحتوى - منفصل تمام<|im_start|> عن الصورة */}
-                  <div style={{ 
-                    padding: '20px',
-                    backgroundColor: 'white',
-                    position: 'relative',
-                    zIndex: 10
-                  }}>
-                    {/* معلومات المقال */}
+                  <div className="p-6">
                     <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
@@ -105,42 +98,14 @@ const BlogSection = () => {
                       </div>
                     </div>
 
-                    {/* العنوان */}
-                    <h3 
-                      style={{
-                        fontSize: '16px',
-                        fontWeight: 'bold',
-                        color: '#111827',
-                        marginTop: '0px',
-                        marginBottom: '12px',
-                        lineHeight: '1.5',
-                        display: 'block',
-                        backgroundColor: 'white',
-                        position: 'relative',
-                        zIndex: 20,
-                        padding: '0'
-                      }}
-                    >
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
                       {article.title}
                     </h3>
 
-                    {/* الوصف */}
-                    <p 
-                      style={{
-                        fontSize: '14px',
-                        color: '#6b7280',
-                        marginBottom: '16px',
-                        lineHeight: '1.6',
-                        display: 'block',
-                        backgroundColor: 'white',
-                        position: 'relative',
-                        zIndex: 20
-                      }}
-                    >
+                    <p className="text-gray-600 mb-4">
                       {article.excerpt}
                     </p>
 
-                    {/* معلومات إضافية */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <User className="w-4 h-4 text-gray-400" />
@@ -173,9 +138,8 @@ const BlogSection = () => {
               {regularArticles.map(article => (
                 <article key={article.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
                   <div className="md:flex">
-                    {/* الصورة */}
                     <div className="md:w-1/3">
-                      <div className="relative w-full" style={{ height: '180px' }}>
+                      <div className="relative w-full h-48 md:h-full">
                         <Image
                           src={article.image}
                           alt={article.title}
@@ -185,14 +149,7 @@ const BlogSection = () => {
                       </div>
                     </div>
 
-                    {/* المحتوى - منفصل تمام */}
-                    <div className="md:w-2/3" style={{ 
-                      padding: '20px',
-                      backgroundColor: 'white',
-                      position: 'relative',
-                      zIndex: 10
-                    }}>
-                      {/* معلومات المقال */}
+                    <div className="md:w-2/3 p-6">
                       <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
@@ -204,42 +161,14 @@ const BlogSection = () => {
                         </div>
                       </div>
 
-                      {/* العنوان */}
-                      <h3 
-                        style={{
-                          fontSize: '18px',
-                          fontWeight: 'bold',
-                          color: '#111827',
-                          marginTop: '0px',
-                          marginBottom: '12px',
-                          lineHeight: '1.5',
-                          display: 'block',
-                          backgroundColor: 'white',
-                          position: 'relative',
-                          zIndex: 20,
-                          padding: '0'
-                        }}
-                      >
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
                         {article.title}
                       </h3>
 
-                      {/* الوصف */}
-                      <p 
-                        style={{
-                          fontSize: '16px',
-                          color: '#6b7280',
-                          marginBottom: '16px',
-                          lineHeight: '1.5',
-                          display: 'block',
-                          backgroundColor: 'white',
-                          position: 'relative',
-                          zIndex: 20
-                        }}
-                      >
+                      <p className="text-gray-600 mb-4">
                         {article.excerpt}
                       </p>
 
-                      {/* معلومات إضافية */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
                           <div className="flex items-center gap-2">
