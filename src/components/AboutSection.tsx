@@ -92,7 +92,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1dI2tFAqXPRphDwPEvQGRac7ED1sWSVzS"
+                src="https://i.postimg.cc/J0MGJ11Q/roof-insulation-team-jeddah-jpg.jpg"
                 alt="فريق عمل أحمد نور للإيبوكسي"
                 fill
                 className="object-cover"
