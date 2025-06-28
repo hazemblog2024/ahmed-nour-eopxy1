@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, User, Clock, Search } from 'lucide-react';
 import { allArticles } from '@/data/articles-extended';
-
 const BlogSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
